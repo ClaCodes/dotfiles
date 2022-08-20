@@ -4,8 +4,10 @@ require("config.plugins")
 require("config.treesitter")
 require("config.color")
 require("config.lsp_mappings")
+require("config.comp")
 --TODO
 --cleanup workspace
+--read help ins-completion
 --
 --autoformat
 --configure for c, cpp, lua, python, zig, rust

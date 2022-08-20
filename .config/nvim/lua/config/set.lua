@@ -35,3 +35,6 @@ augroup highlight_yank
     au TextYankPost * silent! lua vim.highlight.on_yank()
 augroup END
 ]]
+
+--completion
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
