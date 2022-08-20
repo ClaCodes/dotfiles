@@ -161,5 +161,4 @@ bar {
 }
 
 # setup keymapping for us internation altgr deadkeys
-# exec "setxkbmap -layout us -variant altgr-intl -option 'ctrl:swapcaps'"
-exec "setxkbmap -layout us -variant altgr-intl"
+exec "setxkbmap -layout us -variant altgr-intl -option 'ctrl:swapcaps'"
