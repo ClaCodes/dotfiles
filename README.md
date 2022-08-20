@@ -8,3 +8,6 @@ From your cloned directory execute:
 ```
 stow -d ./ -t ~ .
 ```
+
+## nvim
+add `require("config")` to the `init.lua`-file.
