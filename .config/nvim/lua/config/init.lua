@@ -5,6 +5,7 @@ require("config.treesitter")
 require("config.color")
 require("config.lsp_mappings")
 require("config.comp")
+require("config.git_worktree")
 --TODO
 --cleanup workspace
 --read help ins-completion

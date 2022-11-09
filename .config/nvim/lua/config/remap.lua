@@ -14,6 +14,8 @@ nnoremap("<leader>ff", "<cmd>Telescope find_files<cr>")
 nnoremap("<leader>fg", "<cmd>Telescope live_grep<cr>")
 nnoremap("<leader>fb", "<cmd>Telescope buffers<cr>")
 nnoremap("<leader>fh", "<cmd>Telescope help_tags<cr> ")
+nnoremap("<leader>fj", function() require('telescope').extensions.git_worktree.git_worktrees() end, silent) 
+nnoremap("<leader>fk", function() require('telescope').extensions.git_worktree.create_git_worktree() end, silent) 
 
 --tmux-sessionizer
 nnoremap("<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")

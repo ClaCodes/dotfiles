@@ -32,6 +32,8 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
 end
 
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
 local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
@@ -55,16 +57,19 @@ require'lspconfig'.sumneko_lua.setup {
       telemetry = {
         enable = false,
       },
+      capabilities = capabilities,
     },
   },
 }
 require('lspconfig')['zls'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
+    capabilities = capabilities,
 }
 require('lspconfig')['ccls'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
+    capabilities = capabilities,
 }
 
 
@@ -78,7 +83,8 @@ require'lspconfig'.pylsp.setup{
         }
       }
     }
-  }
+  },
+  capabilities = capabilities,
 }
 require('lspconfig')['rust_analyzer'].setup{
     on_attach = on_attach,
@@ -86,5 +92,6 @@ require('lspconfig')['rust_analyzer'].setup{
     -- Server-specific settings...
     settings = {
       ["rust-analyzer"] = {}
-    }
+    },
+    capabilities = capabilities,
 }
