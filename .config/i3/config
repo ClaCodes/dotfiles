@@ -155,3 +155,5 @@ bar {
 
 # setup keymapping for us internation altgr deadkeys
 exec "setxkbmap -layout us -variant altgr-intl"
+
+output eDP-1 scale 2
