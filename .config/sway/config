@@ -126,7 +126,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-msg exit"
+bindsym $mod+Shift+e exec "swaymsg exit"
 bindsym $mod+i exec "firefox"
 
 # resize window (you can also use the mouse for that)
@@ -151,9 +151,24 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        colors {
+            background #1a1b26
+            statusline #7aa2f7
+            focused_workspace #1a1b26 #7aa2f7 #1a1b26
+            inactive_workspace #7aa2f7 #1a1b26 #7aa2f7 
+        }
 }
 
-# setup keymapping for us internation altgr deadkeys
-exec "setxkbmap -layout us -variant altgr-intl"
 
+client.focused           #7aa2f7 #7aa2f7 #1a1b26 #7aa2f7 #7aa2f7
+client.unfocused         #1a1b26 #1a1b26 #7aa2f7 #1a1b26 #1a1b26
+
+
+# setup keymapping for us internation altgr deadkeys
+input "1:1:AT_Translated_Set_2_keyboard" {
+   xkb_layout us
+   xkb_variant altgr-intl
+}
+
+output * bg #1a1b26 solid_color
 output eDP-1 scale 2
