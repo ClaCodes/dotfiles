@@ -102,3 +102,9 @@ source $ZSH/oh-my-zsh.sh
 
 
 bindkey -s ^f "tmux-sessionizer\n"
+
+
+if [ -f ~/.bash_profile ]; then 
+    . ~/.bash_profile;
+fi
+
