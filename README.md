@@ -1,4 +1,4 @@
-This is a repo with config files for a linux setup with i3, tmux, nvim.
+This is a repo with config files for a linux setup with sway, tmux, nvim.
 
 # Installation
 
@@ -9,5 +9,3 @@ From your cloned directory execute:
 stow -d ./ -t ~ .
 ```
 
-## nvim
-add `require("config")` to the `init.lua`-file.
