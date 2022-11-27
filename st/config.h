@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Liberation Mono:pixelsize=30:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -122,6 +122,8 @@ static const char *colorname[] = {
 	"#555555",
 	"gray90", /* default foreground colour */
 	"black", /* default background colour */
+    "#24283b",
+    "#7aa2f7",
 };
 
 
@@ -130,8 +132,8 @@ static const char *colorname[] = {
  * foreground, background, cursor, reverse cursor
  */
 unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
-unsigned int defaultcs = 256;
+unsigned int defaultbg = 260;
+unsigned int defaultcs = 261;
 static unsigned int defaultrcs = 257;
 
 /*
