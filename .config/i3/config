@@ -149,6 +149,7 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+exec "xsetroot -solid \"#24283b\""
 bar {
         status_command i3status
         colors {
@@ -166,4 +167,5 @@ client.unfocused         #1a1b26 #1a1b26 #7aa2f7 #1a1b26 #1a1b26
 
 # setup keymapping for us internation altgr deadkeys
 exec "setxkbmap -layout us -variant altgr-intl"
+bindsym $mod+u exec toggle_keyboard
 
