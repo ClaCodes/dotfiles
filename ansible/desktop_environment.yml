@@ -1,0 +1,8 @@
+- name: Install desktop environment
+  hosts: localhost
+  tasks:
+    - name: Install Packages
+      ansible.builtin.package:
+        name:
+          - i3
+        state: latest

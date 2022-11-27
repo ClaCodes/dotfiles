@@ -1,0 +1,4 @@
+- name: Install desktop environment
+  import_playbook: desktop_environment.yml
+- name: Install terminal emulator
+  import_playbook: terminal.yml

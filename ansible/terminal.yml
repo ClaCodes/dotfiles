@@ -1,0 +1,30 @@
+- name: Install terminal emulator
+  hosts: localhost
+  tasks:
+    - name: Get st-terminal tar ball (suckless.org)
+      ansible.builtin.get_url:
+        url: https://dl.suckless.org/st/st-0.9.tar.gz
+        dest: ./st-0.9.tar.gz
+    - name: Extract st-terminal source code
+      ansible.builtin.command: 
+        warn: false # todo use builtin.unarchive as soon as tar.gz propperly supported
+        argv: 
+          - tar
+          - xvf
+          - ./st-0.9.tar.gz
+    - name: Make 'clean' for st
+      make:
+        chdir: ./st-0.9
+        target: clean
+    - name: Make 'install' for st
+      make:
+        chdir: ./st-0.9
+        target: install
+    - name: Delete extracted source directory
+      file:
+        state: absent
+        path: ./st-0.9
+    - name: Delete source tar ball
+      file:
+        state: absent
+        path: ./st-0.9.tar.gz
