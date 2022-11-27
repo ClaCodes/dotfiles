@@ -153,16 +153,16 @@ exec "xsetroot -solid \"#24283b\""
 bar {
         status_command i3status
         colors {
-            background #1a1b26
+            background #24283b
             statusline #7aa2f7
-            focused_workspace #1a1b26 #7aa2f7 #1a1b26
-            inactive_workspace #7aa2f7 #1a1b26 #7aa2f7 
+            focused_workspace #24283b #7aa2f7 #24283b
+            inactive_workspace #7aa2f7 #24283b #7aa2f7 
         }
 }
 
 
-client.focused           #7aa2f7 #7aa2f7 #1a1b26 #7aa2f7 #7aa2f7
-client.unfocused         #1a1b26 #1a1b26 #7aa2f7 #1a1b26 #1a1b26
+client.focused           #7aa2f7 #7aa2f7 #24283b #7aa2f7 #7aa2f7
+client.unfocused         #24283b #24283b #7aa2f7 #24283b #24283b
 
 
 # setup keymapping for us internation altgr deadkeys
