@@ -12,6 +12,10 @@
           - tar
           - xvf
           - ./st-0.9.tar.gz
+    - name: Replace config.h
+      ansible.builtin.copy:
+        src: ../st/config.h
+        dest: ./st-0.9/config.h
     - name: Make 'clean' for st
       make:
         chdir: ./st-0.9

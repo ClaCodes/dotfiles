@@ -1,6 +1,7 @@
 
 /ansible
 /.git
+/st
 
 ^/README.*
 ^/LICENSE.*
