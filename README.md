@@ -6,6 +6,6 @@ Suggested installation with [gnu stow](https://www.gnu.org/software/stow/).
 From your cloned directory execute:
 
 ```
-stow -d ./ -t ~ .
+stow -t ~ .
 ```
 
