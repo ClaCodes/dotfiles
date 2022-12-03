@@ -1,6 +1,16 @@
 - name: Install terminal emulator
   hosts: localhost
   tasks:
+    - name: Ensure Requirements are installed
+      ansible.builtin.package:
+        name:
+          - gcc
+          - make
+          - libx11-dev
+          - pkg-config
+          - libxft-dev
+          - libfontconfig-dev
+        state: latest
     - name: Get st-terminal tar ball (suckless.org)
       ansible.builtin.get_url:
         url: https://dl.suckless.org/st/st-0.9.tar.gz
