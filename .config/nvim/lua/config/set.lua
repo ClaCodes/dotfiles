@@ -15,6 +15,12 @@ vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = {80}
 vim.opt.termguicolors = true
 
+-- backup/undo
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.nvim/undodir"
+vim.opt.undofile = true
+
 --tabs and indent
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
@@ -29,6 +35,8 @@ vim.opt.list = true
 --search and highlights
 vim.opt.incsearch = true
 vim.opt.hlsearch = false
+
+-- visualize a yank motion by flashing the yanked area
 vim.cmd[[
 augroup highlight_yank
     autocmd!
