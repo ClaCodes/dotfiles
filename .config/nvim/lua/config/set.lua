@@ -5,8 +5,11 @@ vim.g.mapleader = " "
 vim.opt.guicursor = ""
 
 --line numbers
-vim.opt.nu = true
-vim.opt.relativenumber = true
+vim.opt.nu = false
+vim.opt.relativenumber = false
+
+-- mouse
+vim.opt.mouse = ""
 
 --presentation
 vim.opt.wrap = false
