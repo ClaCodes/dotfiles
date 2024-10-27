@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-CURRENT_KEYBOARD_LAYOUT=$(setxkbmap -query | awk '{print $2}' | sed -n 3p)
-if [ $CURRENT_KEYBOARD_LAYOUT == "us" ]; then
-    setxkbmap -layout ch
-else
-    setxkbmap -layout us -variant altgr-intl
-fi
-
-notify-send "$(setxkbmap -query)"

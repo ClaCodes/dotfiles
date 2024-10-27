@@ -1,7 +1,0 @@
-# todo apt cache update and upgrade
-- name: Install desktop environment
-  import_playbook: desktop_environment.yml
-- name: Install terminal emulator
-  import_playbook: terminal.yml
-- name: Install neovim
-  import_playbook: nvim.yml
