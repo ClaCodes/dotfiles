@@ -39,6 +39,9 @@ vim.opt.list = true
 vim.opt.incsearch = true
 vim.opt.hlsearch = false
 
+--background
+vim.opt.background = "light"
+
 -- visualize a yank motion by flashing the yanked area
 vim.cmd[[
 augroup highlight_yank
