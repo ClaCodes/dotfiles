@@ -1,7 +1,7 @@
 require("config.set")
 require("config.plugins")
 require("config.remap")
-require("config.treesitter")
+-- require("config.treesitter")
 require("config.color")
 require("config.lsp_mappings")
 require("config.comp")
